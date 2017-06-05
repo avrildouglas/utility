@@ -10,11 +10,15 @@ public class Number {
 		return majorityString;
 	}
 	
-	public static String FormatPercentage(double majority) {
-		NumberFormat percent = NumberFormat.getPercentInstance();
-		Number
-		String majorityString = percent.format(majority);
+	public static String FormatPercentage(double majority, double twodec) {
+		NumberFormat percentone = NumberFormat.getPercentInstance();
+		percentone.setMaximumFractionDigits(2);
+		String majorityString = percentone.format(majority);
+		NumberFormat percenttwo = NumberFormat.getPercentInstance();
+	//	percenttwo.setMaximumFractionDigits();
+		String twodecString = percenttwo.format(twodec);
 		return majorityString;
+		return twodecString;
 	}
 	
 	public static String FormatCurrency(double price) {
