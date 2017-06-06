@@ -28,7 +28,7 @@ public class Number {
 		String priceString = currency.format(price);
 		return priceString;
 	}
-	
+		
 	public static String[] FormatCurrency(double price, double pricetwo) {
 	    String[] priceArray = new String[2];
 		NumberFormat currency = NumberFormat.getCurrencyInstance();
